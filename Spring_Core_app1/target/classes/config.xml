@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-init-method="init" default-destroy-method="destroy">
+
+    <!-- bean definitions here -->
+	<bean name="candidate" class="com.springdatatypes.Candidate">
+	<constructor-arg>
+		<value>Akash</value>
+	</constructor-arg>
+	<constructor-arg >
+		<value>12</value>
+	</constructor-arg>
+	<constructor-arg>
+	<list>
+		<value>7</value>
+		<value>7</value>
+		<value>7</value>
+	</list>
+	</constructor-arg>
+	<constructor-arg>
+	<map>
+		<entry key="1" value="hm1@gmail.com"></entry>
+		<entry key="2" value="ak2@gmail.com"></entry>
+		<entry key="3" value="vk3@gmail.com"></entry>
+	</map>
+	</constructor-arg>
+	<constructor-arg >
+		<props>
+		<prop key="1">dh77@gmail.com</prop>
+		<prop key="2">sr2@gmail.com</prop>
+		</props>
+	</constructor-arg>
+	</bean>
+	
+	<bean name="admin" class="com.springdatatypes.Admin">
+	<constructor-arg>
+		<value>Raj</value>
+	</constructor-arg>
+	<constructor-arg >
+		<value>77</value>
+	</constructor-arg>
+	<constructor-arg>
+		<value>Hyd</value>
+	</constructor-arg>
+	<constructor-arg >
+		<ref bean="candidate"></ref>
+	</constructor-arg>
+	</bean>
+	
+</beans>
